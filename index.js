@@ -20,7 +20,7 @@ const convert = () => {
 }
 
 const matchAllUnits = (str) => {
-    const re = /((\d+(\.\d+)?)(px)?)([^\p{L}\d%]|$)/gu;
+    const re = /((\d+(\.\d+)?)(px)?)([\s,.;\/]|$)/gu;
     return str.matchAll(re);
 }
 
