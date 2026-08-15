@@ -14,13 +14,14 @@ const convert = () => {
     const numbers = convertUnitsToNumbers(units);
     const rem = convertNumbersToRem(numbers);
 
-    let result = replaceUnitsInString(str, units, rem);
-    conversionElement.innerText = result;
+    let parsedString = replaceUnitsInString(str, units, rem);
+    conversionElement.innerText = parsedString;
+    navigator.clipboard.writeText(parsedString);
 }
 
 const matchAllUnits = (str) => {
     const re = /((\d+(\.\d+)?)(px)?)([^\p{L}\d%]|$)/gu;
-    return str.matchAll(re);    
+    return str.matchAll(re);
 }
 
 const convertUnitsToNumbers = (units) => {
