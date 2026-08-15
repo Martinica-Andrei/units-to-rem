@@ -1,13 +1,14 @@
 const $ = document.querySelector.bind(document);
 const inputElement = $("#input");
 inputElement.value = "";
-const conversionElement = $("#conversion");
+const displayConversion = $("#display-conversion");
+const unitSelector = $("#unit-selector");
 
 const convert = () => {
     const str = inputElement.value;
     const units = [...matchAllUnits(str)];
     if (units.length === 0) {
-        conversionElement.innerText = str;
+        displayConversion.innerText = str;
         return;
     }
 
@@ -15,7 +16,7 @@ const convert = () => {
     const rem = convertNumbersToRem(numbers);
 
     let parsedString = replaceUnitsInString(str, units, rem);
-    conversionElement.innerText = parsedString;
+    displayConversion.innerText = parsedString;
     navigator.clipboard.writeText(parsedString);
 }
 
@@ -37,7 +38,7 @@ const convertNumbersToRem = (numbers) => {
         v = v.toFixed(4)
             .replace(/(-?\d*\.[1-9]*)(0*)/, "$1") // ends with zeroes   
             .replace(/(-?\d*)(\.)$/, "$1") // ends in dot
-        return v + "rem";
+        return v + unitSelector.value;
     });
 }
 

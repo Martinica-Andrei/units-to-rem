@@ -26,6 +26,7 @@ h1{
 main{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap:2rem;
     padding:1rem;
     max-width: 50rem;
@@ -37,10 +38,16 @@ textarea{
     font-size: 2rem; 
 }
 
-#conversion{
+#display-conversion{
     font-size:2rem;
     text-align: left;
     max-width: 60rem;
     overflow: auto;
     max-height: 20rem;
+}
+
+#unit-selector{
+    padding:1rem;
+    font-size: 1rem;
+    max-width: 5rem;
 }

@@ -12,11 +12,15 @@
 <body>
     <main>
         <div >
-            <h1>Units to rem convertor</h1>
+            <h1>Units to rem/em convertor</h1>
             <p>Auto paste on key up</p>
         </div>
-        <textarea rows="4" aria-label="Units: " onkeyup="convert(event)" id="input"></textarea>
-        <pre aria-label="Converted: " id="conversion"></pre>
+        <select aria-label="Unit: " id="unit-selector" onchange="convert()">
+            <option value="rem" selected>rem</option>
+            <option value="em" selected>em</option>
+        </select>
+        <textarea rows="4" aria-label="Units: " onkeyup="convert()" id="input"></textarea>
+        <pre aria-label="Converted: " id="display-conversion"></pre>
     </main>
 
     <script src="index.js"></script>
