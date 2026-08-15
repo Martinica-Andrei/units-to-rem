@@ -17,10 +17,15 @@ body {
     height: 100vh;
     text-align: center;
     font-family: "Baskervville", sans-serif;
+    background-color: var(--md-sys-color-background);
+    color: var(--md-sys-color-on-background);
 }
 
 h1 {
     text-align: center;
+}
+p{
+    font-size: 1.2rem;
 }
 
 main {
@@ -36,18 +41,34 @@ main {
 textarea {
     padding: 1rem;
     font-size: 2rem;
+    background-color: var(--md-sys-color-container);
+    color: var(--md-sys-color-on-container);
+    border-radius: 5px;
+    border: 1px solid var(--md-sys-color-outline);
 }
 
 #display-conversion {
+    padding:0.75rem;
+    border-radius: 1rem;
     font-size: 2rem;
     text-align: left;
     max-width: 60rem;
     overflow: auto;
     max-height: 20rem;
+    background-color: var(--md-sys-color-tertiary);
+    color: var(--md-sys-color-on-tertiary);
 }
 
 #unit-selector {
     padding: 1rem;
     font-size: 1rem;
     max-width: 5rem;
+    background-color: var(--md-sys-color-secondary);
+    color: var(--md-sys-color-on-secondary);
+    border:1px solid var(--md-sys-color-outline);
+    border-radius: 5px;
+}
+
+#unit-selector:hover{
+    cursor:pointer;
 }

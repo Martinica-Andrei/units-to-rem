@@ -1,8 +1,11 @@
 const $ = document.querySelector.bind(document);
+const body = $("body");
 const inputElement = $("#input");
 inputElement.value = "";
 const displayConversion = $("#display-conversion");
 const unitSelector = $("#unit-selector");
+
+body.classList.add("light");
 
 const convert = () => {
     const str = inputElement.value;
