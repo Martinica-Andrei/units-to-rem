@@ -14,6 +14,7 @@ const convert = () => {
     const rem = convertNumbersToRem(numbers);
     const remStr = rem.join(" ");
     convertedElement.innerText = remStr;
+    navigator.clipboard.writeText(remStr);
 }
 
 const replaceNonDigitsWithSpace = (str) => {
