@@ -7,7 +7,7 @@ const convert = () => {
     const str = inputElement.value;
     const units = [...matchAllUnits(str)];
     if (units.length === 0) {
-        conversionElement.innerText = "";
+        conversionElement.innerText = str;
         return;
     }
 
@@ -19,12 +19,12 @@ const convert = () => {
 }
 
 const matchAllUnits = (str) => {
-    const re = /(\d+(\.\d+)?)(\p{L}*)/gu;
+    const re = /((\d+(\.\d+)?)(px)?)([^\p{L}\d%]|$)/gu;
     return str.matchAll(re);    
 }
 
 const convertUnitsToNumbers = (units) => {
-    return units.map(v => +v[1].replace(/(\d*)(.\d*)?/, "$1$2"));
+    return units.map(v => +v[2]);
 }
 
 const convertNumbersToRem = (numbers) => {
@@ -51,7 +51,7 @@ const replaceUnitsInString = (str, units, newValues) => {
         }
 
         result.push(...newValues[unitIndex]);
-        i += units[unitIndex][0].length - 1;
+        i += units[unitIndex][1].length - 1;
         unitIndex++;
     }
 

@@ -37,8 +37,10 @@ textarea{
     font-size: 2rem; 
 }
 
-#converted{
+#conversion{
     font-size:2rem;
-    text-align: center;
+    text-align: left;
     max-width: 60rem;
+    overflow: auto;
+    max-height: 20rem;
 }
