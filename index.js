@@ -5,8 +5,6 @@ inputElement.value = "";
 const displayConversion = $("#display-conversion");
 const unitSelector = $("#unit-selector");
 
-body.classList.add("light");
-
 const convert = () => {
     const str = inputElement.value;
     const units = [...matchAllUnits(str)];
@@ -62,3 +60,21 @@ const replaceUnitsInString = (str, units, newValues) => {
 
     return result.join("");
 }
+
+window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', event => {
+    setTheme(event.matches)
+});
+
+const setTheme = (isLight) => {
+    if (isLight) {
+        body.classList.remove("dark");
+        body.classList.add("light");
+    }
+    else{
+        body.classList.add("dark");
+        body.classList.remove("light");
+    }
+}
+
+const prefersLightMode = window?.matchMedia('(prefers-color-scheme: light)');
+setTheme(prefersLightMode?.matches);
