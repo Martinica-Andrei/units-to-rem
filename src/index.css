@@ -9,12 +9,16 @@
     padding: 0;
 }
 
+html{
+    height: 100%;
+}
+
 body {
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     text-align: center;
     font-family: "Baskervville", sans-serif;
     background-color: var(--md-sys-color-background);
@@ -34,7 +38,7 @@ main {
     align-items: center;
     gap: 2rem;
     padding: 1rem;
-    max-width: 50rem;
+    max-width: 40rem;
     width: 100%;
 }
 
@@ -45,6 +49,7 @@ textarea {
     color: var(--md-sys-color-on-container);
     border-radius: 5px;
     border: 1px solid var(--md-sys-color-outline);
+    max-width: 100%;
 }
 
 #display-conversion {
@@ -52,9 +57,9 @@ textarea {
     border-radius: 1rem;
     font-size: 2rem;
     text-align: left;
-    max-width: 60rem;
+    max-width: 100%;
     overflow: auto;
-    max-height: 20rem;
+    max-height: 25rem;
     background-color: var(--md-sys-color-tertiary);
     color: var(--md-sys-color-on-tertiary);
 }
