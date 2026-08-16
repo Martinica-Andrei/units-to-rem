@@ -37,7 +37,7 @@ const convertNumbersToRem = (numbers) => {
         }
         v = v / 16;
         v = v.toFixed(4)
-            .replace(/(-?\d*\.\d+?)(0+)\D*$/, "$1") // ends with zeroes   
+            .replace(/(-?\d*\.\d*?)(0+)\D*$/, "$1") // ends with zeroes   
             .replace(/(-?\d+)(\.)$/, "$1") // ends in dot
         return v + unitSelector.value;
     });
