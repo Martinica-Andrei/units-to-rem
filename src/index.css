@@ -9,7 +9,7 @@
     padding: 0;
 }
 
-html{
+html {
     height: 100%;
 }
 
@@ -28,7 +28,8 @@ body {
 h1 {
     text-align: center;
 }
-p{
+
+p {
     font-size: 1.2rem;
 }
 
@@ -52,8 +53,26 @@ textarea {
     max-width: 100%;
 }
 
+
+select {
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: var(--md-sys-color-secondary);
+    color: var(--md-sys-color-on-secondary);
+    border: 1px solid var(--md-sys-color-outline);
+    border-radius: 5px;
+}
+
+select:hover{
+    cursor: pointer;
+}
+
+option{
+    background-color: black;
+}
+
 #display-conversion {
-    padding:0.75rem;
+    padding: 0.75rem;
     border-radius: 1rem;
     font-size: 2rem;
     text-align: left;
@@ -62,18 +81,4 @@ textarea {
     max-height: 25rem;
     background-color: var(--md-sys-color-tertiary);
     color: var(--md-sys-color-on-tertiary);
-}
-
-#unit-selector {
-    padding: 1rem;
-    font-size: 1rem;
-    max-width: 5rem;
-    background-color: var(--md-sys-color-secondary);
-    color: var(--md-sys-color-on-secondary);
-    border:1px solid var(--md-sys-color-outline);
-    border-radius: 5px;
-}
-
-#unit-selector:hover{
-    cursor:pointer;
 }
